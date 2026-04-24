@@ -1,0 +1,32 @@
+Test Case no :- 1
+
+
+#!/bin/bash
+
+# System Audit:-
+
+whoami
+w
+last
+uname -a
+hostname
+uptime
+
+# Group Creation:-
+
+sudo groupadd developers
+sudo groupadd qa
+
+# User Creation :- 
+sudo useradd -m -g developers aman
+sudo useradd -m -g developers ritu
+sudo useradd -m -g qa karan
+
+# Verify :-
+id aman
+id karan
+
+# Delete ritu :-
+pkill -u ritu
+sudo userdel -r ritu
+id ritu
